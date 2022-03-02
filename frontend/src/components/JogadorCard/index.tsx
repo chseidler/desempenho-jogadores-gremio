@@ -1,4 +1,5 @@
 import JogadorScore from "../JogadorScore";
+import { Link } from "react-router-dom";
 
 function JogadorCard() {
 
@@ -16,7 +17,10 @@ function JogadorCard() {
             <div className="chgremio-card-bottom-container">
                 <h3>{jogador.title}</h3>
                 <JogadorScore />
-                <div className="btn btn-primary chgremio-btn">Avaliar</div>
+
+                <Link to={`/form/${jogador.id}`}>
+                    <div className="btn btn-primary chgremio-btn">Avaliar</div>
+                </Link>
             </div>
         </div>
     );
