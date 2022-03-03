@@ -1,6 +1,8 @@
 package com.chseidler.desempenhojogadoresgremio.entities;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_player")
@@ -14,6 +16,9 @@ public class Player {
     private Integer count;
     private String image;
     private String position;
+
+    @OneToMany(mappedBy = "id.player")
+    private Set<Score> scores = new HashSet<>();
 
     public Player() {
     }
@@ -73,5 +78,9 @@ public class Player {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    public Set<Score> getScores() {
+        return scores;
     }
 }
