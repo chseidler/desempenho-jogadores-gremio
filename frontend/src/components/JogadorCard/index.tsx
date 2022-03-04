@@ -1,24 +1,21 @@
 import JogadorScore from "../JogadorScore";
 import { Link } from "react-router-dom";
+import { Player } from "types/player";
 
-function JogadorCard() {
+type Props = {
+    player: Player;
+}
 
-    const jogador = {
-        id: 1,
-        image: "https://gremio.blob.core.windows.net/imgs-site/md-jogador-acao-760af28962cdf938537a5e131492d91b.jpg",
-        title: "Brenno",
-        count: 100,
-        score: 0.2
-    };
+function JogadorCard( { player } : Props) {
 
     return (
         <div>
-            <img className="chgremio-movie-card-image" src={jogador.image} alt={jogador.title} />
+            <img className="chgremio-movie-card-image" src={player.image} alt={player.name} />
             <div className="chgremio-card-bottom-container">
-                <h3>{jogador.title}</h3>
+                <h3>{player.name}</h3>
                 <JogadorScore />
 
-                <Link to={`/form/${jogador.id}`}>
+                <Link to={`/form/${player.id}`}>
                     <div className="btn btn-primary chgremio-btn">Avaliar</div>
                 </Link>
             </div>
