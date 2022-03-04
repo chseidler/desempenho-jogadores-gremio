@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Listing />} />
         <Route path="/form">
-          <Route path=":jogadorId" element={<Form />} />
+          <Route path=":playerId" element={<Form />} />
         </Route>
       </Routes>
     </BrowserRouter>
