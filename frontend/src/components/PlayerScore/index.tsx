@@ -1,18 +1,20 @@
-import JogadorStars from '../JogadorStars';
+import PlayerStars from '../PlayerStars';
 import './styles.css';
 
-function JogadorScore() {
+type Props = {
+    score: number;
+    count: number;
+}
 
-    const score = 3.5;
-    const count = 13;
+function PlayerScore( { score, count } : Props) {
     
     return (
         <div className="chgremio-score-container">
         <p className="chgremio-score-value">{score > 0 ? score.toFixed(1) : '-'}</p>
-        <JogadorStars />
+        <PlayerStars score={score} />
         <p className="chgremio-score-count">{count} avaliações</p>
     </div>
     );
 }
 
-export default JogadorScore;
+export default PlayerScore;

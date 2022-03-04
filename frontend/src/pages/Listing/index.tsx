@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { PlayerPage } from "types/player";
 import { BASE_URL } from "utils/requests";
-import JogadorCard from "../../components/JogadorCard";
+import PlayerCard from "../../components/PlayerCard";
 import Pagination from "../../components/Pagination";
 
 function Listing() {
@@ -37,7 +37,7 @@ function Listing() {
                 <div className="row">
                     {page.content.map(player => (
                         <div key={player.id} className="col-sm-6 col-lg-4 col-xl-3 mb-3">
-                            <JogadorCard player={player} />
+                            <PlayerCard player={player} />
                         </div>
                     ))}
                 </div>
