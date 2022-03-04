@@ -1,21 +1,27 @@
 import axios from "axios";
+import { useEffect, useState } from "react";
+import { PlayerPage } from "types/player";
 import { BASE_URL } from "utils/requests";
 import JogadorCard from "../../components/JogadorCard";
 import Pagination from "../../components/Pagination";
 
 function Listing() {
 
+    const [pageNumber, setPageNumber] = useState(0);
 
-    //FORMA ERRADA
-    axios.get(`${BASE_URL}/players?size=12&page=0`)
+    useEffect(() => {
+        axios.get(`${BASE_URL}/players?size=12&page=10`)
         .then(response => {
-            console.log(response.data);
+            const data = response.data as PlayerPage;
+            setPageNumber(data.number);
         });
-
+    }, []);
 
 
     return (
         <>
+
+            <p>{pageNumber}</p>
             <Pagination />
 
             <div className="container">
