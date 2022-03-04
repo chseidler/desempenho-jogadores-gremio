@@ -14,7 +14,7 @@ function Listing() {
         last: true,
         totalPages: 0,
         totalElements: 0,
-        size: 12,
+        size: 17,
         number: 0,
         first: true,
         numberOfElements: 0,
@@ -22,7 +22,7 @@ function Listing() {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/players?size=12&page=${pageNumber}`)
+        axios.get(`${BASE_URL}/players?size=17&page=${pageNumber}`)
             .then(response => {
                 const data = response.data as PlayerPage;
                 setPage(data);
