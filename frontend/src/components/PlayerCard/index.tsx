@@ -12,7 +12,7 @@ function PlayerCard( { player } : Props) {
         <div>
             <img className="chgremio-movie-card-image" src={player.image} alt={player.name} />
             <div className="chgremio-card-bottom-container">
-                <h3>{player.name}</h3>
+                <h3>{player.name} - {player.position}</h3>
                 <PlayerScore count={player.count} score={player.score} />
 
                 <Link to={`/form/${player.id}`}>

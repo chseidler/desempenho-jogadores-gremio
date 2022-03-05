@@ -10,7 +10,7 @@ function PlayerScore( { score, count } : Props) {
     
     return (
         <div className="chgremio-score-container">
-        <p className="chgremio-score-value">{score > 0 ? score.toFixed(1) : '-'}</p>
+        <p className="chgremio-score-value">{score >= 0 ? score.toFixed(1) : '-'}</p>
         <PlayerStars score={score} />
         <p className="chgremio-score-count">{count} avaliações</p>
     </div>

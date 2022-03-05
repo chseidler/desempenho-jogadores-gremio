@@ -55,7 +55,7 @@ function FormCard({ playerId }: Props) {
         <div className="chgremio-form-container">
             <img className="chgremio-movie-card-image" src={player?.image} alt={player?.name} />
             <div className="chgremio-card-bottom-container">
-                <h3>{player?.name}</h3>
+                <h3>{player?.name} - {player?.position}</h3>
                 <form className="chgremio-form" onSubmit={handleSubmit}>
                     <div className="form-group chgremio-form-group">
                         <label htmlFor="email">Informe seu email</label>
@@ -64,6 +64,7 @@ function FormCard({ playerId }: Props) {
                     <div className="form-group chgremio-form-group">
                         <label htmlFor="score">Informe sua avaliação</label>
                         <select className="form-control" id="score">
+                            <option>0</option>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
