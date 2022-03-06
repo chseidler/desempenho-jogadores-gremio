@@ -1,4 +1,4 @@
-# desempenho-jogadores-gremio
+# score-performance
 
 Site desenvolvido para votação da atuação dos jogadores do Grêmio no jogo contra o Mirassol.
 Acesso: https://chseidler-djg.netlify.app/
