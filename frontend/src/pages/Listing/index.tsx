@@ -40,7 +40,7 @@ function Listing() {
             <div className="container">
                 <div className="row">
                     {page.content.map(player => (
-                        <div key={player.id} className="col-sm-6 col-lg-4 col-xl-3 mb-3">
+                        <div key={player.id} className="col-sm-6 col-lg-4 col-xl-4 mb-4">
                             <PlayerCard player={player} />
                         </div>
                     ))}
